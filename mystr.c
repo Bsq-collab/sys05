@@ -39,14 +39,16 @@ int mystrcmp( char *s1, char *s2){
   int ctr=0;
   while(s1[ctr]){
     if(s2[ctr]==0){
-      return s2[ctr]-s1[ctr];
+      return s1[ctr]-s2[ctr];
     }
     else if (s2[ctr]==s1[ctr]){
       ctr++;
     }
     else{
-      return s2[ctr]-s1[ctr];
-    }}}
+      return s1[ctr]-s2[ctr];
+    }
+  }
+}
 
 char * mystrchr(char *s, char c){
   int ctr=0;

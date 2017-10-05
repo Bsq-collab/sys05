@@ -30,6 +30,13 @@ int main(){
     printf("ncopy: %s\n", strncpy(strcpy2,strcpy1,2));
     printf("MY ncopy: %s\n", mystrncpy(mystrcpy2,mystrcpy1,2));
 
+      printf("testing mystrcmp:\n\n");
+     char s1[200]= "let's search this string";
+     char s2[200]= "abcdefghik";
+         
+     printf("strcmp (built in/Expected): %d\n", strcmp(s1,s2));
+     printf("MY strcmp: %d\n", mystrcmp(s1,s2));
+
      printf("testing mystrchr:\n\n");
      char search[200]= "let's search this string";
      char item= 's';
@@ -38,5 +45,6 @@ int main(){
      printf("strchr (built in/Expected): %p\n", strchr(search,item));
      printf("MY strchr: %p\n", mystrchr(search,item));
 
+    
     return 0;
 }
