@@ -1,16 +1,7 @@
 #include <stdio.h>
 #include <string.h>
-
-int mystrlen(char *);
-char * mystrcpy( char *dest, char *source );
-char * mystrncpy( char *dest, char *source,int n );
-char * mystrcat( char *dest, char *source);
-char * mystrncat( char *dest, char *source);
-int mystrcmp( char *s1, char *s2);
-char *mystrchr( char *s, char c);
-char * mystrstr( char *s1, char *s2);
-
-int main(){
+#include "string.h"
+/*int main(){
     
     printf("Testing mystrlen:\n");
     char mystry[50] = "DW is the best CS teacher";
@@ -39,9 +30,17 @@ int main(){
     printf("ncopy: %s\n", strncpy(strcpy2,strcpy1,2));
     printf("MY ncopy: %s\n", mystrncpy(mystrcpy2,mystrcpy1,2));
 
+     printf("testing mystrchr:\n\n");
+     char search[200]= "let's search this string";
+     char item= 's';
+     printf("string to search: %s\n", search);
+    
+     printf("strchr (built in/Expected): %p\n", strchr(search,item));
+     printf("MY strchr: %p\n", mystrchr(search,item));
+
     return 0;
 }
-
+*/
 int mystrlen(char * str){
     
     int ctr = 0;
@@ -87,6 +86,17 @@ int mystrcmp( char *s1, char *s2){
     else if (s2[ctr]==s1[ctr]){
       ctr++;
     }
-    else if(s2[ctr]>s1[ctr])
-  } 
-} 
+    else if(s2[ctr]>s1[ctr]){
+    }}}
+
+char * mystrchr(char *s, char c){
+  int ctr=0;
+  while (ctr<mystrlen(s)){
+    if(s[ctr]== c){
+      return &s[ctr];
+    }
+    ctr+=1;
+  }
+  return NULL;
+    
+}
